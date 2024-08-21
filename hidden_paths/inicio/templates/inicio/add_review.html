@@ -1,0 +1,17 @@
+{% extends "inicio/Base.html" %}
+{% block titulo %}Agregar Reseña{% endblock %}
+
+{% block contenido %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Agregar Reseña</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Enviar Reseña</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
